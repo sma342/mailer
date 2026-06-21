@@ -57,6 +57,25 @@ The repository includes custom Copilot configuration for this project:
 - Use Copilot skills from `.copilot/skills/` when writing code, tests, or templates
 - Use agents for multi-step tasks like documentation generation
 
+## Agents
+
+- Agent configuration files for this project are stored under `.github/agents/` (primary location for VS Code-recognized agents). The repository also mirrors agent assets under `.agents/` for compatibility with some tools, and Copilot skills are kept in `.copilot/skills/`.
+
+How to use the `docs-generator-agent` (example):
+
+1. Open VS Code and ensure the Copilot / Agents extensions are enabled. If you recently changed agent files, run `Developer: Reload Window` in VS Code.
+2. Trigger the agent from the Agents UI or by using a prompt such as:
+
+```
+Generate documentation for mailer.subscribers module
+```
+
+The agent will analyze the code, tests, and README, then generate Markdown files into the `docs/` folder.
+
+Notes:
+- Keep agent files under `.github/agents/` if you want them to be recognized by VS Code or workspace tooling.
+- If an agent does not appear, verify the Agents extension is enabled and reload the window.
+
 ## Continuous Integration
 
 - GitHub Actions workflow is configured in `.github/workflows/autotest.yml`
