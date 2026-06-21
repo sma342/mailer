@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribers</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f9fc; color: #333; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 12px; }
+    th { background: #2c7be5; color: white; }
+    .button { display: inline-block; padding: 10px 16px; background: #2c7be5; color: white; text-decoration: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Subscriber List</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <p><a class="button" href="/">Back to home</a></p>
+  {% if subscribers %}
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for subscriber in subscribers %}
+          <tr>
+            <td>{{ subscriber.email }}</td>
+            <td>{{ subscriber.name }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No subscribers yet.</p>
+  {% endif %}
+</body>
+</html>

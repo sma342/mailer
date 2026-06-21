@@ -55,6 +55,12 @@ The repository includes custom Copilot configuration for this project:
 - Use Copilot skills from `.copilot/skills/` when writing code, tests, or templates
 - Use agents for multi-step tasks like documentation generation
 
+## Continuous Integration
+
+- GitHub Actions workflow is configured in `.github/workflows/autotest.yml`
+- Runs on `push` and `pull_request` against `main`
+- Installs dependencies from `requirements.txt` and runs `python -m pytest -q`
+
 ## Notes
 
 - Keep secrets out of the codebase
