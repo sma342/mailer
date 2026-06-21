@@ -27,8 +27,10 @@ Mailer is a small Flask-based Python app for managing email subscribers and send
    ```
 3. Run the Flask app:
    ```powershell
-   python mailer/web.py
+   python -m mailer.web
    ```
+
+> Note: The app uses package-relative imports, so it must be started with `python -m mailer.web` from the repository root.
 
 ## Copilot Integration
 
