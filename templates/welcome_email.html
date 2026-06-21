@@ -1,0 +1,18 @@
+{% extends "base_email.html" %}
+
+{% block title %}Welcome, {{ user_name }}!{% endblock %}
+
+{% block header %}Welcome to Mailer, {{ user_name }}!{% endblock %}
+
+{% block content %}
+<p>Hi {{ user_name }},</p>
+<p>Thanks for joining Mailer. We're excited to help you manage your email campaigns with confidence.</p>
+<ul>
+  <li><strong>Email:</strong> {{ user_email }}</li>
+  <li><strong>Account created:</strong> {{ signup_date }}</li>
+</ul>
+<p>To get started, verify your email address and open your dashboard:</p>
+<p><a class="button" href="{{ confirmation_link }}">Verify your email</a></p>
+<p>If you didn't sign up for Mailer, you can safely ignore this message.</p>
+<p>Best regards,<br>The Mailer Team</p>
+{% endblock %}

@@ -1,0 +1,16 @@
+Welcome to Mailer, {{ user_name }}!
+
+Hi {{ user_name }},
+
+Thanks for joining Mailer. We're excited to help you manage your email campaigns with confidence.
+
+Email: {{ user_email }}
+Account created: {{ signup_date }}
+
+Please verify your email address using the link below:
+{{ confirmation_link }}
+
+If you didn't sign up for Mailer, you can safely ignore this message.
+
+Best regards,
+The Mailer Team

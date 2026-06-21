@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Mailer{% endblock %}</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f7f9fc; color: #333; margin: 0; padding: 0; }
+    .container { width: 100%; max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 12px rgba(0,0,0,0.08); }
+    .header { background: #2c7be5; color: #ffffff; padding: 24px; text-align: center; }
+    .content { padding: 24px; line-height: 1.6; }
+    .button { display: inline-block; background: #2c7be5; color: #ffffff; padding: 12px 20px; border-radius: 6px; text-decoration: none; }
+    .footer { background: #f2f5fa; color: #6c757d; padding: 16px; text-align: center; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>{% block header %}Welcome to Mailer{% endblock %}</h1>
+    </div>
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+      {% block footer %}If you have any questions, reply to this email or contact support.{% endblock %}
+    </div>
+  </div>
+</body>
+</html>
