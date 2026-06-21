@@ -10,7 +10,7 @@ capabilities:
   - example-creation
   - test-analysis
 activation:
-  trigger: "Generate documentation for"
+  trigger: "Generate documentation for [module]"
   keywords:
     - "generate docs"
     - "create documentation"
@@ -38,10 +38,10 @@ memory:
   - examples
   - standards
 restrictions:
-  - mustIncludeTypeHints: true
-  - mustFollowPEP257: true
-  - noSpamming: true
-  - validateMarkdown: true
+  mustIncludeTypeHints: true
+  mustFollowPEP257: true
+  noSpamming: true
+  validateMarkdown: true
 output:
   format: markdown
   location: docs/

@@ -49,10 +49,10 @@ memory:
   - standards
 
 restrictions:
-  - mustIncludeTypeHints: true
-  - mustFollowPEP257: true
-  - noSpamming: true
-  - validateMarkdown: true
+  mustIncludeTypeHints: true
+  mustFollowPEP257: true
+  noSpamming: true
+  validateMarkdown: true
 
 output:
   format: markdown
